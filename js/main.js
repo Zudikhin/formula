@@ -3,6 +3,7 @@ $(document).ready(function () {
     
     $(".header_top_burger").click(function() {
         $(this).toggleClass("active");
+        $(".modal_header").toggleClass("active");
     });
 
     $(".investor_block_text_list_item_head").click(function() {
@@ -11,6 +12,7 @@ $(document).ready(function () {
 
     $(".footer_block_second_btn").click(function() {
       $(this).toggleClass("active");
+      $(".footer_nav").toggleClass("active");
     });
 
     $('.project_block_mob_slider').slick({
