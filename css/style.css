@@ -3221,6 +3221,84 @@ h1 {
   }
 }
 
+.one_news {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+  background: #09090D;
+  padding-top: 112px;
+  padding-bottom: 50px;
+}
+.one_news_block h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  color: #FFFFFF;
+}
+.one_news_block_img {
+  margin-top: 20px;
+}
+.one_news_block_img img {
+  width: 100%;
+  border-radius: 13px;
+}
+.one_news_block_date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 10px;
+}
+.one_news_block_date span {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 19px;
+  color: #FFFFFF;
+  margin-right: 5px;
+}
+.one_news_block_text {
+  margin-top: 10px;
+}
+.one_news_block_text p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: #B5B5B5;
+}
+@media (min-width: 1200px) {
+  .one_news {
+    padding-top: 210px;
+    padding-bottom: 100px;
+  }
+  .one_news_block h2 {
+    font-size: 36px;
+    line-height: 44px;
+  }
+  .one_news_block_img {
+    margin-top: 40px;
+  }
+  .one_news_block_date {
+    margin-top: 30px;
+  }
+  .one_news_block_date span {
+    font-size: 12px;
+    line-height: 19px;
+    margin-right: 14px;
+  }
+  .one_news_block_text {
+    margin-top: 30px;
+  }
+  .one_news_block_text p {
+    font-size: 16px;
+    line-height: 25px;
+  }
+}
+
 .investment_management {
   position: relative;
   -webkit-box-sizing: border-box;
@@ -3937,6 +4015,135 @@ h1 {
 @media (min-width: 768px) {
   .modal_header {
     width: calc(100% - 148px);
+  }
+}
+
+.back_modal {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.86);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  z-index: 4;
+  cursor: pointer;
+  display: none;
+}
+.back_modal.active {
+  display: block;
+}
+
+.modal_window {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: rgba(30, 29, 37, 0.86);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  z-index: 5;
+  max-width: 460px;
+  width: calc(100% - 30px);
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 15px 20px 20px 20px;
+  border-radius: 8px;
+  display: none;
+}
+.modal_window.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.modal_window h4 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: 0.005em;
+  color: #FFFFFF;
+}
+.modal_window p {
+  font-family: "Mulish", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  letter-spacing: 0.005em;
+  color: #FFFFFF;
+  margin-top: 11px;
+}
+.modal_window form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+.modal_window form input {
+  width: 100%;
+  height: 56px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid #F1F1F6;
+  border-radius: 5px;
+  padding: 0px 20px;
+  font-family: "Mulish", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 56px;
+  letter-spacing: 0.005em;
+  color: #FFFFFF;
+  margin-top: 15px;
+}
+.modal_window form button {
+  width: 100%;
+  height: 56px;
+  background: linear-gradient(92.35deg, #723BF0 29.43%, #9C71FF 51.63%, #723BF0 87.78%);
+  border-radius: 5px;
+  font-family: "Mulish", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 56px;
+  text-align: center;
+  letter-spacing: 0.005em;
+  color: #FFFFFF;
+  margin-top: 15px;
+}
+@media (min-width: 768px) {
+  .modal_window {
+    padding: 45px;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .modal_window h4 {
+    font-size: 24px;
+    line-height: 29px;
+  }
+  .modal_window p {
+    font-size: 14px;
+    line-height: 17px;
+    text-align: left;
+    margin-top: 10px;
+  }
+  .modal_window form {
+    margin-top: 5px;
   }
 }
 

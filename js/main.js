@@ -15,6 +15,36 @@ $(document).ready(function () {
       $(".footer_nav").toggleClass("active");
     });
 
+    $(".back_modal").click(function() {
+      $(this).removeClass("active");
+      $(".modal_window").removeClass("active");
+    });
+
+    $(".modal_header_btn").click(function() {
+      $(".modal_header").removeClass("active");
+      $(".header_top_burger").removeClass("active");
+      $(".back_modal").addClass("active");
+      $(".modal_window").addClass("active");
+      $(".footer_block_second_btn").removeClass("active");
+      $(".footer_nav").removeClass("active");
+    });
+
+    $(".header_bottom_callback").click(function() {
+      $(".back_modal").addClass("active");
+      $(".modal_window").addClass("active");
+    });
+
+    $(".investor_block_text_callback").click(function() {
+      $(".back_modal").addClass("active");
+      $(".modal_window").addClass("active");
+    });
+
+    $(".main_block_text_callback").click(function() {
+      $(".back_modal").addClass("active");
+      $(".modal_window").addClass("active");
+    });
+
+    
     $('.project_block_mob_slider').slick({
         infinite: true,
         slidesToShow: 2,
